@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpsFlow — Track Progress. Deploy Success.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-name">OpsFlow</span>
+    </div>
+    <div class="topbar-status">
+      <span class="dot dot-live" aria-hidden="true"></span>
+      <span>streak: 10d</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: signature terminal element -->
+  <section class="hero">
+    <div class="term-window">
+      <div class="term-chrome">
+        <span class="term-dot red"></span>
+        <span class="term-dot amber"></span>
+        <span class="term-dot green"></span>
+        <span class="term-path">hadi@devops-lab:~$</span>
+      </div>
+      <div class="term-body" id="termBody">
+        <div class="term-line" id="typedLine"></div>
+        <pre class="term-output" id="termOutput"></pre>
+      </div>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Cloud &amp; DevOps progress tracker</p>
+      <h1>Track progress.<br>Deploy success.</h1>
+      <p class="hero-sub">One dashboard for skills, certs, labs, and projects — instead of scattered notes, sheets, and half-finished Notion pages.</p>
+    </div>
+  </section>
+
+  <!-- OVERALL PROGRESS -->
+  <section class="panel" aria-labelledby="progress-heading">
+    <div class="panel-head">
+      <h2 id="progress-heading"><span class="idx">01</span> overall_progress</h2>
+      <span class="panel-tag">45%</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-name">Linux</span>
+        <div class="bar"><div class="bar-fill" style="--pct:80%"></div></div>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Git</span>
+        <div class="bar"><div class="bar-fill" style="--pct:60%"></div></div>
+        <span class="skill-pct">60%</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Docker</span>
+        <div class="bar"><div class="bar-fill" style="--pct:40%"></div></div>
+        <span class="skill-pct">40%</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Kubernetes</span>
+        <div class="bar"><div class="bar-fill" style="--pct:20%"></div></div>
+        <span class="skill-pct">20%</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">AWS</span>
+        <div class="bar"><div class="bar-fill" style="--pct:15%"></div></div>
+        <span class="skill-pct">15%</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel-cols">
+
+    <!-- CERTIFICATIONS -->
+    <section class="panel" aria-labelledby="cert-heading">
+      <div class="panel-head">
+        <h2 id="cert-heading"><span class="idx">02</span> certifications</h2>
+      </div>
+      <ul class="cert-list">
+        <li><span class="cert-code">RHCSA</span><span class="status status-progress">in progress</span></li>
+        <li><span class="cert-code">AWS CCP</span><span class="status status-todo">planned</span></li>
+        <li><span class="cert-code">AWS SAA</span><span class="status status-todo">planned</span></li>
+        <li><span class="cert-code">CKA</span><span class="status status-todo">planned</span></li>
+        <li><span class="cert-code">CKAD</span><span class="status status-todo">planned</span></li>
+        <li><span class="cert-code">AZ-900</span><span class="status status-todo">planned</span></li>
+      </ul>
+    </section>
+
+    <!-- LABS -->
+    <section class="panel" aria-labelledby="lab-heading">
+      <div class="panel-head">
+        <h2 id="lab-heading"><span class="idx">03</span> labs</h2>
+      </div>
+      <ul class="lab-list">
+        <li>
+          <span class="status status-done">done</span>
+          <span class="lab-name">Docker Networking Lab</span>
+        </li>
+        <li>
+          <span class="status status-progress">active</span>
+          <span class="lab-name">Kubernetes Service Lab</span>
+        </li>
+        <li>
+          <span class="status status-todo">queued</span>
+          <span class="lab-name">RHCSA: LVM &amp; Storage</span>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="panel" aria-labelledby="project-heading">
+    <div class="panel-head">
+      <h2 id="project-heading"><span class="idx">04</span> projects</h2>
+    </div>
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-name">WattWatch</span>
+        <span class="status status-done">completed</span>
+      </div>
+      <p class="project-desc">IoT energy monitoring system.</p>
+      <div class="tag-row">
+        <span class="tag">ESP32</span>
+        <span class="tag">MQTT</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Docker</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-name">OpsFlow</span>
+        <span class="status status-progress">in progress</span>
+      </div>
+      <p class="project-desc">This dashboard — DevOps progress tracker deployed on Red Hat OpenShift.</p>
+      <div class="tag-row">
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">OpenShift</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY LOG -->
+  <section class="panel" aria-labelledby="log-heading">
+    <div class="panel-head">
+      <h2 id="log-heading"><span class="idx">05</span> daily_log</h2>
+    </div>
+    <div class="log-entry">
+      <span class="log-date">Jul 16</span>
+      <span class="log-topics">Docker Volumes, Bind Mounts</span>
+      <span class="log-hours">2.5h</span>
+    </div>
+    <div class="log-entry">
+      <span class="log-date">Jul 15</span>
+      <span class="log-topics">RHEL 9 install, VMware Workstation networking</span>
+      <span class="log-hours">3.0h</span>
+    </div>
+    <div class="log-entry">
+      <span class="log-date">Jul 14</span>
+      <span class="log-topics">oc CLI basics, Deployments vs Pods</span>
+      <span class="log-hours">1.5h</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>OpsFlow · static build · served from nginx:alpine</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
